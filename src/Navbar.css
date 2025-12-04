@@ -1,0 +1,205 @@
+/* -----------------------------------
+   MAIN NAVBAR
+----------------------------------- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  background-color: white;
+  z-index: 3000;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Logo */
+.nav-logo {
+  width: 35px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Title */
+.nav-title {
+  justify-self: center;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(144,34,43);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hamburger */
+.hamburger {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #000;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/* -----------------------------------
+   BLUR PAGE WHEN MENU OPEN
+----------------------------------- */
+.blur-page {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  z-index: 2600;
+  pointer-events: none;
+  background: rgba(0,0,0,0.1);
+}
+
+/* -----------------------------------
+   FULLSCREEN SLIDE MENU (RIGHT)
+----------------------------------- */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -120%;
+  width: 60%;
+  height: 100vh;
+
+  background: rgb(144,34,43);
+  padding: 40px 30px;
+
+  transition: right 0.45s ease;
+  color: white;
+  z-index: 4000;
+}
+
+.menu.show {
+  right: 0;
+}
+
+/* -----------------------------------
+   MENU HEADER
+----------------------------------- */
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* -----------------------------------
+   MENU ITEMS
+----------------------------------- */
+.menu-items {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.menu-link {
+  background: none;
+  border: none;
+
+  font-size: 48px;
+  font-family: "Cinzel", serif;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.menu-link span {
+  font-size: 18px;
+  opacity: 0.75;
+  font-family: "Montserrat", sans-serif;
+}
+
+.menu-link:hover {
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+/* -----------------------------------
+   MOBILE FIXES
+----------------------------------- */
+@media (max-width: 500px) {
+  .nav {
+    padding: 10px 12px;
+  }
+
+  .nav-logo {
+    width: 28px;
+  }
+
+  .nav-title {
+    font-size: 12px;
+  }
+
+  .hamburger span {
+    width: 22px;
+  }
+
+  .menu {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .menu-link {
+    font-size: 38px;
+    justify-content: flex-end;
+  }
+
+  .menu-header {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 330px) {
+  .nav-title {
+    font-size: 10px;
+  }
+
+  .hamburger span {
+    width: 20px;
+  }
+
+  .menu-link {
+    font-size: 32px;
+  }
+}

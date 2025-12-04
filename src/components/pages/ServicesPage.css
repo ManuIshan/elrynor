@@ -1,0 +1,43 @@
+.page-wrapper {
+  margin-top: 120px;
+  padding: 20px;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-heading {
+  text-align: center;
+  color: rgb(144,34,43);
+  font-family: "Cinzel", serif;
+  margin-bottom: 20px;
+}
+
+/* Back Button */
+.back-btn {
+  width: fit-content;
+  align-self: center;
+  background: rgb(144,34,43);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background: rgb(95, 18, 22);
+}
+
+@media (max-width: 600px) {
+  .back-btn {
+    width: 80%;
+    text-align: center;
+    padding: 12px 0;
+  }
+}

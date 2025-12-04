@@ -1,0 +1,122 @@
+
+.hh3-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Cinzel", serif;
+}
+
+.hh3-heading {
+  font-size: 64px;
+  color: rgb(144, 34, 43);
+  margin-bottom: 40px;
+  font-family: "Dm sans";
+}
+
+.hh3-heading span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.hh3-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+.hh3-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+
+.hh3-card {
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+.hh3-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+}
+
+.hh3-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transform: scale(1.1) translateX(-15px);
+  transition: transform 0.8s ease;
+}
+
+.hh3-card:hover .hh3-img {
+  transform: scale(1.18) translateX(15px);
+    }
+.hh3-text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+
+  padding:  5px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+
+  transition: background 0.3s ease;
+}
+
+.hh3-card:hover .hh3-text-overlay {
+  background: rgba(144, 34, 43, 0.65);
+}
+
+@media (max-width: 768px) {
+  .hh3-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hh3-img-wrap {
+    height: 260px;
+  }
+
+  .hh3-heading {
+    font-size: 38px;
+  }
+
+  .hh3-img {
+    transform: scale(1.1) translateX(-12px);
+  }
+
+  .hh3-card:hover .hh3-img,
+  .hh3-card:active .hh3-img {
+    transform: scale(1.15) translateX(12px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hh3-img-wrap {
+    height: 220px;
+  }
+
+  .hh3-text-overlay {
+    font-size: 20px;
+  }
+}

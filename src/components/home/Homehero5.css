@@ -1,0 +1,122 @@
+/* WRAPPER */
+.hero5-wrapper {
+  padding: 80px 40px;
+  width: 100%;
+  text-align: center;
+}
+
+/* HEADING */
+.hero5-heading {
+  font-family:"Dm sans";
+  font-size: 64px;
+  color: rgb(144, 34, 43);
+  margin-bottom: 50px;
+}
+.hero5-heading span {
+  font-family:"Playfair Display", serif;
+  font-style: italic;
+}
+
+/* CAROUSEL OUTER CONTAINER */
+.hero5-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* ------------------------- */
+/* CAROUSEL AREA */
+/* ------------------------- */
+
+.hero5-carousel {
+  width: 100%;           /* FULL width */
+  max-width: 750px;      /* limit for desktop */
+  margin: 0 auto;
+}
+
+/* IMAGE — FINAL PERFECT FIT */
+.hero5-image {
+  width: 100%;
+  height: 700px;          /* dynamic height = no empty gaps */
+  object-fit: cover;   /* full image visible */
+  display: block;        /* removes inline spacing */
+
+  background:transparent;
+  padding: 0;
+  margin: 0;
+
+  border-radius: 36px ;
+}
+
+/* ------------------------- */
+/* NEXT + PREV BUTTONS */
+/* ------------------------- */
+
+.hero5-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgb(144, 34, 43);
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.hero5-btn:hover {
+  background: rgb(100, 20, 30);
+  transform: scale(1.08);
+}
+
+/* ------------------------- */
+/* CAPTION */
+/* ------------------------- */
+
+.hero5-caption {
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #444;
+}
+
+/* ------------------------- */
+/* RESPONSIVE */
+/* ------------------------- */
+
+@media (max-width: 900px) {
+  .hero5-image {
+    max-height: 330px;
+  }
+
+  .hero5-btn {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero5-heading {
+    font-size: 34px;
+  }
+
+  .hero5-image {
+    max-height: 260px;
+  }
+
+  .hero5-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}

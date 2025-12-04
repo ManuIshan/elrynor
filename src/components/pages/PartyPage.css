@@ -1,0 +1,164 @@
+/* -----------------------------------
+   PAGE CONTAINER
+----------------------------------- */
+.party-container {
+  padding: 120px 20px 60px;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* -----------------------------------
+   HEADING & QUOTE
+----------------------------------- */
+.party-heading {
+  font-size: 48px;
+  text-align: center;
+  color: rgb(144,34,43);
+  font-family: "Cinzel", serif;
+  margin-bottom: 10px;
+}
+
+.party-quote {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: #555;
+  font-style: italic;
+}
+
+/* -----------------------------------
+   GRID — 8 IMAGES
+----------------------------------- */
+.party-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.party-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.party-img:hover {
+  transform: scale(1.04);
+}
+
+/* -----------------------------------
+   CAPTION
+----------------------------------- */
+.party-caption {
+  text-align: center;
+  font-size: 17px;
+  color: #555;
+  margin: 25px auto 40px;
+  max-width: 750px;
+}
+
+/* -----------------------------------
+   BACK BUTTON
+----------------------------------- */
+.party-back-btn {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background: rgb(144,34,43);
+  color: white;
+  padding: 10px 26px;
+  border-radius: 28px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.party-back-btn:hover {
+  background: rgb(100,22,28);
+}
+
+/* -----------------------------------
+   POPUP OVERLAY
+----------------------------------- */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.popup-box {
+  position: relative;
+  animation: zoomIn 0.35s ease;
+}
+
+.popup-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: rgb(230,230,230);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* -----------------------------------
+   REVEAL ANIMATION
+----------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.7s ease;
+}
+
+.reveal-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes zoomIn { 
+  from { transform: scale(0.75); } 
+  to { transform: scale(1); } 
+}
+
+/* -----------------------------------
+   RESPONSIVE
+----------------------------------- */
+@media (max-width: 900px) {
+  .party-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .party-heading {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .party-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .party-img {
+    aspect-ratio: 4 / 4;
+  }
+}

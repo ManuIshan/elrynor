@@ -1,0 +1,133 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
+
+.homehero-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.homehero-inner {
+  position: relative;
+  text-align: center;
+}
+
+/* MAIN HEADING */
+.homehero-title{
+  font-family: "Pinyon Script", cursive;
+  color: rgb(144,34,43);
+  font-size: 16vw;
+  line-height: 0.75;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-top: 50px;
+}
+
+.homehero-img {
+  position: absolute;
+  right: 300px;
+  top: 10px !important;
+  width: 140px;
+  transform: rotate(10deg);
+  z-index: 5;
+}
+
+@media (min-width: 901px) {
+  .homehero-inner {
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homehero-img {
+    position: static; /* remove absolute */
+    margin: 0 auto -40px;
+    width: 160px;
+    transform: rotate(8deg);
+  }
+}
+
+@media (max-width: 900px) {
+
+  .homehero-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .homehero-title {
+    font-size: 22vw;
+    margin-top: 0px;
+    line-height: 0.9;
+    margin-left: -20px;
+  }
+
+  .homehero-container {
+    height: auto;
+    padding: 80px 20px;
+  }
+}
+
+
+.homehero-overimg {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translateX(-50%) rotate(8deg);
+  width: 100px;
+  z-index: 10;
+  border-radius: 12px;
+  pointer-events: none;
+  height: 140px; 
+}
+
+
+@media (max-width: 900px) {
+  .homehero-overimg {
+    position: static;
+    width: 120px;
+    margin-bottom: -20px;
+    transform: rotate(6deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .homehero-overimg {
+    margin-top: -400px;
+    width: 95px;
+    transform: rotate(0deg);
+  }
+}
+.homehero-quote {
+  font-family: "Cinzel", serif;
+  font-size: 22px;
+  color: rgb(144, 34, 43);
+  letter-spacing: 1px;
+  opacity: 0.9;
+  margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+  .homehero-quote {
+    font-size: 18px;
+    margin-top: 40px;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 500px) {
+  .homehero-quote {
+    font-size: 16px;
+    padding: 0 15px;
+    margin-top: -120px;
+    
+  }
+}

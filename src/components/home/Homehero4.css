@@ -1,0 +1,223 @@
+
+:root {
+  --accent: rgb(144,34,43);
+  --accent-strong: rgb(144,34,43);
+  --muted: #777;
+
+  --card-bg: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f3f2f1 50%,
+    rgb(144,34,43) 100%
+  );
+
+  --radius: 12px;
+  --shadow: 0 18px 45px rgba(0,0,0,0.07);
+}
+
+
+.hh4-section {
+  padding: 48px 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hh4-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.hh4-heading {
+  margin-top: 100px;
+  text-align: center;
+  font-family: "Dm sans";
+  font-size: 58px;
+  margin-bottom: 60px;
+  color: var(--accent);
+}
+.hh4-heading span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+
+.hh4-toggle-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.hh4-toggle {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.hh4-toggle.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+
+.hh4-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  justify-items: center;
+}
+
+.hh4-card {
+  width: 100%;
+  max-width: 260px;
+  background: var(--card-bg);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  gap: 10px;
+}
+.hh4-card.active { opacity: 1; }
+
+.hh4-badges {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  display: flex;
+  gap: 8px;
+}
+.hh4-off {
+  background: var(--accent);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.hh4-best {
+  background: black;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.hh4-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.hh4-caption {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hh4-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.hh4-points li {
+  margin-bottom: 8px;
+  padding-left: 12px;
+  position: relative;
+}
+.hh4-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.hh4-price-btn {
+  margin-top: auto;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 12px;
+  border-radius: 999px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  border: none;
+}
+
+.hh4-price-original {
+  text-decoration: line-through;
+  opacity: 0.9;
+  font-size: 14px;
+}
+.hh4-price-current {
+  background: rgba(255,255,255,0.15);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+
+
+/* Tablets */
+@media (max-width: 900px) {
+  .hh4-heading { font-size: 46px; }
+  .hh4-grid { gap: 16px; }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .hh4-grid {
+    grid-template-columns: 1fr;  /* 1 card per row */
+  }
+
+  .hh4-card {
+    max-width: 90%;
+    min-height: 340px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .hh4-heading { font-size: 38px; }
+  .hh4-card { padding: 12px; max-width: 70%; }
+  .hh4-title { font-size: 16px; }
+  .hh4-caption { font-size: 12px; }
+}
+/* -------------------------------------------------
+   PRICING NOTE
+------------------------------------------------- */
+.hh4-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #444;
+  font-style: italic;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .hh4-note {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}

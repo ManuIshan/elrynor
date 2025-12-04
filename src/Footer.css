@@ -1,0 +1,99 @@
+.footer-wrapper {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  color: black;
+  border-top: 2px solid rgb(144, 34, 43);   /* ⭐ TOP BORDER */
+}
+
+/* BRAND NAME */
+.footer-title {
+  font-family: "Pinyon Script", cursive;
+  font-size: 16vw;
+  color: rgb(144, 34, 43);
+  margin-bottom: 40px;
+}
+
+/* TWO COLUMNS → ALIGN LEFT & RIGHT */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;   /* ⭐ LEFT & RIGHT ENDS */
+  align-items: flex-start;          /* aligns them nicely */
+  width: 80%;                       /* keeps columns inside center area */
+  margin: 0 auto 40px auto;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.footer-col a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: rgb(144, 34, 43);
+  opacity: 1;
+}
+
+.footer-col p {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* SOCIAL ICONS */
+.footer-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-icons a {
+  color: black;
+  font-size: 26px;
+  transition: 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: rgb(144, 34, 43);
+  transform: scale(1.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+  .footer-title {
+    font-size: 90px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    justify-content: center !important;
+    align-items: center !important;   /* ⭐ centers both columns */
+    text-align: center !important;
+  }
+
+  .footer-col {
+    width: 100%;
+    text-align: center !important;     /* ⭐ FIX: centers links + text */
+    align-items: center !important;    /* ⭐ Fix for flex children */
+  }
+
+  .footer-col a,
+  .footer-col p {
+    text-align: center !important;      /* ⭐ FULL FIX */
+    margin: 0 auto;
+  }
+}
+
