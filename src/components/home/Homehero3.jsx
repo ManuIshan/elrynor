@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./HomeHero3.css";
+import "./Homehero3.css";
 
 const cards = [
   { id: 1, title: "Indicate", image: "/serviceindicatecover.jpeg", link: "/service/indicate" },

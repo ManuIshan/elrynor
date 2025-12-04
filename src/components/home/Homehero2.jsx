@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./HomeHero2.css";
+import "./Homehero2.css";
 
 function HomeHero2() {
 
